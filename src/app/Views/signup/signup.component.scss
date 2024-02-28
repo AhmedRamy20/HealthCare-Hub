@@ -1,0 +1,18 @@
+.img-fluid {
+  width: 700px;
+  height: 550px;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+#gLogin {
+  margin-left: 15px;
+}
+.error-message {
+  color: red;
+}

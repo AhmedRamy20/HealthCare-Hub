@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md bg-opacity-25 bg-dark fixed-top rounded-pill mx-1 p-0">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="../../../assets/logo/logo.png" class="logo" alt="">
+
+    </a>
+    <button class="navbar-toggler order-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+      aria-controls="navbarNav=" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-start w-100 bg-dark" id="offcanvas"  data-bs-backdrop="static">
+      <div class="offcanvas-header text-bg-info rounded-3">
+
+        <div class="d-flex flex-row align-items-center gap-3">
+          <img src="../../../assets/logo/logo.png" alt="" class="logo d-block ms-3">
+          <p class="fs-2 fw-bold m-0 text-wrap lh-base">Health-Care Hub</p>
+        </div>
+
+
+        <button type="button" class="btn-close ms-3 bg-light p-3 rounded-pill " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+      </div>
+
+      <div class="offcanvas-body m-auto">
+        <ul class="navbar-nav d-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/home" routerLinkActive="text-danger">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/labs' routerLinkActive="text-danger">Labs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/pharmacy" routerLinkActive="text-danger">Pharmacy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="text-danger">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" routerLinkActive="text-danger">
+              <i class="bi bi-bag fs-2 fw-bold position-relative">
+                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+              </i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <a class="nav-link ms-auto" routerLink="/login" routerLinkActive="text-danger">
+      Login
+      <i class="bi bi-box-arrow-in-right text-success"></i>
+    </a>
+
+  </div>
+</nav>

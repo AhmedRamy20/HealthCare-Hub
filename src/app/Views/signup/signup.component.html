@@ -1,0 +1,169 @@
+<app-navbar></app-navbar>
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div
+      class="row d-flex justify-content-center align-items-center h-100"
+      id="parent"
+    >
+      <div class="col-md-4" id="image">
+        <img src="assets/images/sign.png" class="img-fluid" alt="doctor" />
+      </div>
+
+      <div class="col-md-4">
+        <h1>Sign Up For Your Account</h1>
+        <form #signupForm="ngForm" (ngSubmit)="signUser(signupForm.value)">
+          <div class="row">
+            <!-- frist name input -->
+            <div class="form-outline mb-4 col">
+              <label for="fristName" class="form-label">Frist Name</label>
+              <input
+                pattern="^[A-Za-z]+$"
+                id="fName"
+                name="fName"
+                class="form-control form-control-lg"
+                placeholder="your frist name"
+                required
+                minlength="2"
+                #fName="ngModel"
+                ngModel
+              />
+            </div>
+            <span *ngIf="fName.invalid && fName.touched" class="error-message">
+              please enter a valid name
+            </span>
+            <!-- last name input -->
+            <div class="form-outline mb-4 col">
+              <label for="lName" class="form-label">Last Name</label>
+              <input
+                pattern="^[A-Za-z]+$"
+                type="name"
+                id="lName"
+                name="lName"
+                class="form-control form-control-lg"
+                placeholder="your last name"
+                required
+                minlength="2"
+                #lName="ngModel"
+                ngModel
+              />
+            </div>
+          </div>
+          <span *ngIf="lName.invalid && lName.touched" class="error-message">
+            please enter a valid name
+          </span>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control form-control-lg"
+              placeholder="Enter your email address"
+              required
+              email
+              minlength="8"
+              #email="ngModel"
+              ngModel
+            />
+          </div>
+          <span *ngIf="email.invalid && email.touched" class="error-message">
+            please enter a valid email
+          </span>
+          <!-- phone num input -->
+          <div class="form-outline mb-4">
+            <label for="phone" class="form-label">Phone Number </label>
+            <input
+              type="tel"
+              pattern="^(0020|\+20|01)[0-2,5]{1}[0-9]{8}$"
+              id="phone"
+              name="phone"
+              class="form-control form-control-lg"
+              placeholder="Enter your Phone"
+              required
+              minlength="6"
+              #phone="ngModel"
+              ngModel
+            />
+          </div>
+          <span *ngIf="phone.invalid && phone.touched" class="error-message">
+            please enter a valid phone number
+          </span>
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label" for="pass">Password</label>
+            <input
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              id="pass"
+              required
+              name="password"
+              maxlength="17"
+              #password="ngModel"
+              ngModel
+              type="password"
+              class="form-control form-control-lg"
+              placeholder="Enter password"
+            />
+          </div>
+          <span
+            *ngIf="password.invalid && password.touched"
+            class="error-message"
+            >please enter a valid password</span
+          >
+          <!-- Confirm Password input -->
+          <div class="form-outline mb-3">
+            <label for="pass" class="form-label">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmpassword"
+              id="pass"
+              required
+              minlength="8"
+              #confirmpassword="ngModel"
+              ngModel
+              type="password"
+              class="form-control form-control-lg"
+              placeholder="Enter password"
+            />
+          </div>
+          <span
+            *ngIf="confirmpassword.invalid && confirmpassword.touched"
+            class="error-message"
+            >please enter a valid password</span
+          >
+          <span
+            *ngIf="
+              password.value !== confirmpassword.value &&
+              password.touched &&
+              confirmpassword.touched
+            "
+            class="error-message"
+          >
+            Passwords must match
+          </span>
+          <!-- button -->
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem"
+              id="Login"
+              [disabled]="
+                signupForm.invalid || password.value !== confirmpassword.value
+              "
+            >
+              Sign Up
+            </button>
+
+            <span class="small fw-bold mt-2 pt-1 mb-0 col">
+              Already have an account?
+              <a routerLink="/login" class="link-danger">Log in</a>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
