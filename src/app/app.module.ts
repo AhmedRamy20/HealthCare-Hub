@@ -26,6 +26,10 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NurseDashComponent } from './components/Dashboards/nurse-dash/nurse-dash.component';
+import { DoctorDashComponent } from './components/Dashboards/doctor-dash/doctor-dash.component';
+import { LabDashComponent } from './components/Dashboards/lab-dash/lab-dash.component';
+import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pharmacy-dash.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DownloadAppComponent,
     FooterComponent,
     ServicesComponent,
+    NurseDashComponent,
+    DoctorDashComponent,
+    LabDashComponent,
+    PharmacyDashComponent,
   ],
   imports: [
     FontAwesomeModule,

@@ -8,6 +8,10 @@ import { ContactComponent } from './Views/contact/contact.component';
 import { CartComponent } from './Views/cart/cart.component';
 import { LoginComponent } from './Views/login/login.component';
 import { SignupComponent } from './Views/signup/signup.component';
+import { NurseDashComponent } from './components/Dashboards/nurse-dash/nurse-dash.component';
+import { DoctorDashComponent } from './components/Dashboards/doctor-dash/doctor-dash.component';
+import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pharmacy-dash.component';
+import { LabDashComponent } from './components/Dashboards/lab-dash/lab-dash.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -15,6 +19,12 @@ const routes: Routes = [
   { path: 'labs', component: LabsComponent },
   { path: 'pharmacy', component: PharmacyComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'dashboard', children: [
+    { path: 'nurse', component: NurseDashComponent },
+    { path: 'doctor', component: DoctorDashComponent },
+    { path: 'admin-ph', component: PharmacyDashComponent },
+    { path: 'admin-lab', component: LabDashComponent },
+  ], },
   { path: 'cart', component: CartComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
@@ -25,4 +35,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
