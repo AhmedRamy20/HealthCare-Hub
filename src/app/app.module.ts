@@ -30,6 +30,7 @@ import { NurseDashComponent } from './components/Dashboards/nurse-dash/nurse-das
 import { DoctorDashComponent } from './components/Dashboards/doctor-dash/doctor-dash.component';
 import { LabDashComponent } from './components/Dashboards/lab-dash/lab-dash.component';
 import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pharmacy-dash.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pha
     FormsModule,
     MatButtonModule,
     BrowserAnimationsModule,
-  
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
