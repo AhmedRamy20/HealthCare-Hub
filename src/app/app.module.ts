@@ -30,7 +30,8 @@ import { NurseDashComponent } from './components/Dashboards/nurse-dash/nurse-das
 import { DoctorDashComponent } from './components/Dashboards/doctor-dash/doctor-dash.component';
 import { LabDashComponent } from './components/Dashboards/lab-dash/lab-dash.component';
 import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pharmacy-dash.component';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -67,10 +68,12 @@ import {MatTableModule} from '@angular/material/table';
     FormsModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
+
 
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
