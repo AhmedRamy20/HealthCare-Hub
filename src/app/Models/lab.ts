@@ -1,5 +1,6 @@
 export interface Lab {
   name:string;
-  img:string;
-  
+  imgUrl:string;
+  description:string;
+  testNumber:number;
 }

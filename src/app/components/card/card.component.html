@@ -1,0 +1,16 @@
+<div class="card" >
+  <ng-content select="[img]">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+  </ng-content>
+  <div class="card-body p-2">
+    <ng-content select="[lab-name]">
+      <!-- <h5 class="card-title">Card title</h5> -->
+    </ng-content>
+    <ng-content select="[desc]">
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. -->
+    </ng-content>
+    <ng-content select="[price]"></ng-content>
+    <ng-content select="[testNum]"></ng-content>
+    <ng-content select="[button]"></ng-content>
+  </div>
+</div>
