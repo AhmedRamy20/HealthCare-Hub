@@ -1,0 +1,226 @@
+<!-- table start -->
+<div class="container mt-4">
+  <h2>Manage medications</h2>
+
+  <!-- modal -->
+  <div class="container">
+    <!-- buttons for actions -->
+    <button class="btn btn-danger me-2">Delete</button>
+    <!-- Button to trigger the modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#addMedicineModal"
+    >
+      Add New Medicine
+    </button>
+    <br />
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="addMedicineModal"
+      tabindex="-1"
+      aria-labelledby="addMedicineModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addMedicineModalLabel">
+              Add New Medicine
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Form inside modal -->
+            <form>
+              <div class="mb-3">
+                <label for="medicineName" class="form-label"
+                  >Medicine Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="medicineName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="batchNo" class="form-label">Batch No</label>
+                <input type="text" class="form-control" id="batchNo" required />
+              </div>
+              <div class="mb-3">
+                <label for="expiryDate" class="form-label">Expiry Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="expiryDate"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantity"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+    <br />
+    <!-- table -->
+    <div class="table-responsive">
+      <table class="table">
+        <!-- table head -->
+        <thead>
+          <tr>
+            <th scope="col"><input type="checkbox" /></th>
+            <th scope="col">Medicine name</th>
+            <th scope="col">Batch No</th>
+            <th scope="col">Expiry date</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- row1 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Aspirin</td>
+            <td>B1234</td>
+            <td>2025-06-30</td>
+            <td>100</td>
+            <td>$10.50</td>
+
+            <td>
+              <!-- icon buttons -->
+              <button class="btn"><i class="bi-pencil"></i></button>
+              <button class="btn"><i class="bi-trash"></i></button>
+            </td>
+          </tr>
+          <!--  row2 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Ibuprofen</td>
+            <td>C5678</td>
+            <td>2026-12-15</td>
+            <td>50</td>
+            <td>$7.20</td>
+
+            <td>
+              <!--  icon buttons -->
+              <button class="btn"><i class="bi-pencil"></i></button>
+              <button class="btn"><i class="bi-trash"></i></button>
+            </td>
+          </tr>
+          <!--  row3 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Paracetamol</td>
+            <td>D9876</td>
+            <td>2024-09-20</td>
+            <td>200</td>
+            <td>$15.80</td>
+
+            <td>
+              <!-- icon buttons -->
+              <button class="btn"><i class="bi-pencil"></i></button>
+              <button class="btn"><i class="bi-trash"></i></button>
+            </td>
+          </tr>
+          <!--  row4 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Omeprazole</td>
+            <td>E2468</td>
+            <td>2023-11-10</td>
+            <td>75</td>
+            <td>$12.30</td>
+
+            <td>
+              <!--  icon buttons -->
+              <button class="btn"><i class="bi-pencil"></i></button>
+              <button class="btn"><i class="bi-trash"></i></button>
+            </td>
+          </tr>
+          <!--  row5 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Vitamin C</td>
+            <td>F1357</td>
+            <td>2025-08-05</td>
+            <td>80</td>
+            <td>$9.90</td>
+
+            <td>
+              <!--  icon buttons -->
+              <button class="btn"><i class="bi-pencil"></i></button>
+              <button class="btn"><i class="bi-trash"></i></button>
+            </td>
+          </tr>
+          <!--  row6 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Amoxicillin</td>
+            <td>A7890</td>
+            <td>2024-07-12</td>
+            <td>80</td>
+            <td>$8.70</td>
+
+            <td>
+              <!-- icon buttons -->
+              <button class="btn"><i class="bi-pencil"></i></button>
+              <button class="btn"><i class="bi-trash"></i></button>
+            </td>
+          </tr>
+          <!--  rows end -->
+        </tbody>
+      </table>
+    </div>
+    <!-- pagination -->
+    <div>
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link">
+              <span aria-hidden="true">&laquo;</span> Previous</a
+            >
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              Next <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- pagination end -->
+  </div>
+  <!--table end -->
+</div>
