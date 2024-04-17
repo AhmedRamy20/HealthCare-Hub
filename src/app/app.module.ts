@@ -30,7 +30,11 @@ import { NurseDashComponent } from './components/Dashboards/nurse-dash/nurse-das
 import { DoctorDashComponent } from './components/Dashboards/doctor-dash/doctor-dash.component';
 import { LabDashComponent } from './components/Dashboards/lab-dash/lab-dash.component';
 import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pharmacy-dash.component';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { MedicationComponent } from './components/Dashboards/pharmacy-dash/medication/medication.component';
+import { OrdersComponent } from './components/Dashboards/pharmacy-dash/orders/orders.component';
+import { ChartsComponent } from './components/Dashboards/pharmacy-dash/charts/charts.component';
+import { MessagesComponent } from './components/Dashboards/pharmacy-dash/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +60,10 @@ import {MatTableModule} from '@angular/material/table';
     DoctorDashComponent,
     LabDashComponent,
     PharmacyDashComponent,
+    MedicationComponent,
+    OrdersComponent,
+    ChartsComponent,
+    MessagesComponent,
   ],
   imports: [
     FontAwesomeModule,
@@ -67,8 +75,7 @@ import {MatTableModule} from '@angular/material/table';
     FormsModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    MatTableModule
-
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
