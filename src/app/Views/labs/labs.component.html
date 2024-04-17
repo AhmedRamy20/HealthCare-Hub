@@ -1,3 +1,15 @@
 <app-navbar></app-navbar>
+<div class="container">
+  <div class="row justify-content-center g-3">
+    <div *ngFor="let lab of labs" class="col-12 col-md-4 col-lg-3">
+      <app-card>
+        <img [src]="lab.imgUrl" class="card-img-top" img>
+        <h2 lab-name class="m-0">{{lab.name}}</h2>
+        <p desc class="m-0" >{{lab.description}}</p>
+        <p testNum class="text-end text-danger fw-bold m-0">{{lab.testNumber}} tests</p>
 
+      </app-card>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>

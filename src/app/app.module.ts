@@ -8,7 +8,7 @@ import { LabsComponent } from './Views/labs/labs.component';
 import { PharmacyComponent } from './Views/pharmacies/pharmacies.component';
 import { ContactComponent } from './Views/contact/contact.component';
 import { CartComponent } from './Views/cart/cart.component';
-import { LandingComponent } from './components/landing/landing.component';
+// import { LandingComponent } from './Components/landing/landing.component';
 import { NotFoundComponent } from './Views/not-found/not-found.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { WorkComponent } from './components/work/work.component';
@@ -35,6 +35,7 @@ import { MedicationComponent } from './components/Dashboards/pharmacy-dash/medic
 import { OrdersComponent } from './components/Dashboards/pharmacy-dash/orders/orders.component';
 import { ChartsComponent } from './components/Dashboards/pharmacy-dash/charts/charts.component';
 import { MessagesComponent } from './components/Dashboards/pharmacy-dash/messages/messages.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
   declarations: [
