@@ -12,6 +12,8 @@ import { NurseDashComponent } from './components/Dashboards/nurse-dash/nurse-das
 import { DoctorDashComponent } from './components/Dashboards/doctor-dash/doctor-dash.component';
 import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pharmacy-dash.component';
 import { LabDashComponent } from './components/Dashboards/lab-dash/lab-dash.component';
+import { TestsComponent } from './Views/tests/tests.component';
+import { DoctorsComponent } from './Views/doctors/doctors.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
