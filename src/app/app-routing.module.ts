@@ -8,10 +8,10 @@ import { ContactComponent } from './Views/contact/contact.component';
 import { CartComponent } from './Views/cart/cart.component';
 import { LoginComponent } from './Views/login/login.component';
 import { SignupComponent } from './Views/signup/signup.component';
-import { NurseDashComponent } from './components/Dashboards/nurse-dash/nurse-dash.component';
-import { DoctorDashComponent } from './components/Dashboards/doctor-dash/doctor-dash.component';
-import { PharmacyDashComponent } from './components/Dashboards/pharmacy-dash/pharmacy-dash.component';
-import { LabDashComponent } from './components/Dashboards/lab-dash/lab-dash.component';
+import { NurseDashComponent } from './Components/Dashboards/nurse-dash/nurse-dash.component';
+import { DoctorDashComponent } from './Components/Dashboards/doctor-dash/doctor-dash.component';
+import { PharmacyDashComponent } from './Components/Dashboards/pharmacy-dash/pharmacy-dash.component';
+import { LabDashComponent } from './Components/Dashboards/lab-dash/lab-dash.component';
 import { TestsComponent } from './Views/tests/tests.component';
 import { DoctorsComponent } from './Views/doctors/doctors.component';
 
