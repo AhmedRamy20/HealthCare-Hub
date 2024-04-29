@@ -14,6 +14,10 @@ import { PharmacyDashComponent } from './Components/Dashboards/pharmacy-dash/pha
 import { LabDashComponent } from './Components/Dashboards/lab-dash/lab-dash.component';
 import { TestsComponent } from './Views/tests/tests.component';
 import { DoctorsComponent } from './Views/doctors/doctors.component';
+import { ChartsComponent } from './Components/Dashboards/pharmacy-dash/charts/charts.component';
+import { MedicationComponent } from './Components/Dashboards/pharmacy-dash/medication/medication.component';
+import { MessagesComponent } from './Components/Dashboards/pharmacy-dash/messages/messages.component';
+import { OrdersComponent } from './Components/Dashboards/pharmacy-dash/orders/orders.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -25,7 +29,18 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'dashboard/nurse', component: NurseDashComponent },
   { path: 'dashboard/doctor', component: DoctorDashComponent },
-  { path: 'dashboard/admin-ph', component: PharmacyDashComponent },
+
+  {
+    path: 'dashboard/admin-ph',
+    component: PharmacyDashComponent,
+    children: [
+      { path: 'charts', component: ChartsComponent },
+      { path: 'medication', component: MedicationComponent },
+      { path: 'messages', component: MessagesComponent },
+      { path: 'orders', component: OrdersComponent },
+    ],
+  },
+
   { path: 'dashboard/admin-lab', component: LabDashComponent },
   { path: 'cart', component: CartComponent },
   { path: 'login', component: LoginComponent },
@@ -37,4 +52,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
