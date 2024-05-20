@@ -38,6 +38,7 @@ import { LandingComponent } from './Components/landing/landing.component';
 import { TestsComponent } from './Views/tests/tests.component';
 import { CardComponent } from './Components/card/card.component';
 import { DoctorsComponent } from './Views/doctors/doctors.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { DoctorsComponent } from './Views/doctors/doctors.component';
     CardComponent,
     NavbarComponent,
     DoctorsComponent,
-    TestsComponent
+    TestsComponent,
   ],
   imports: [
     FontAwesomeModule,
@@ -83,6 +84,7 @@ import { DoctorsComponent } from './Views/doctors/doctors.component';
     MatButtonModule,
     BrowserAnimationsModule,
     MatTableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
